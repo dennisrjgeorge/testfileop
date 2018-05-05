@@ -6,7 +6,6 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 
-
 int
 Open_File(void)
 {
@@ -116,6 +115,8 @@ TestFunction(void)
 
     ret = Run_AppendWriteTest(fd);
     ret = Run_AppendTruncateTest(fd);
+
+    close(fd);
 
     return ret;
 }
